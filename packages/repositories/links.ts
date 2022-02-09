@@ -1,10 +1,20 @@
+const aws = require("aws-sdk");
 const {
   DynamoDBClient,
   QueryCommand,
   ScanCommand,
 } = require("@aws-sdk/client-dynamodb");
 
-const client = new DynamoDBClient({ region: "us-west-2" });
+aws.config.update({
+  credentials: {
+    accessKeyId: process.env.DDB_ACCESS_KEY_ID,
+    secretAccessKey: process.env.DDB_SECRET_ACCESS_KEY,
+  },
+});
+
+const client = new DynamoDBClient({
+  region: "us-west-2",
+});
 
 export const getLinksForTag = async (table, tag) => {
   // Try also: KeyConditionExpression: "pk = :pk and begins_with(sk, :q)",
@@ -37,6 +47,6 @@ export const getLinks = async (table) => {
         return [key.trim(), value["S"]];
       })
     )
-  );
+  ).sort();
   return { key: result.LastEvaluatedKey || null, items };
 };
