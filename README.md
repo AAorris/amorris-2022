@@ -1,3 +1,9 @@
+# morris-turbo
+
+Getting familiar with [Turborepo](https://turborepo.org) and [DynamoDB](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/clients/client-dynamodb/index.html)
+
+---
+
 # Turborepo starter
 
 This is an official Yarn v1 starter turborepo.
