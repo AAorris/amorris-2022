@@ -1,4 +1,3 @@
-import { getLinksForTag } from "repositories/links";
 import TagPage from "ui/tags/TagPage";
 
 export const getStaticPaths = async () => {
@@ -8,7 +7,10 @@ export const getStaticPaths = async () => {
 export async function getStaticProps({ params }) {
   return {
     props: {
-      links: await getLinksForTag("amorris-links-01", params.tag),
+      links: await require("repositories/links").getLinksForTag(
+        "amorris-links-01",
+        params.tag
+      ),
     },
     revalidate: 3600,
   };
