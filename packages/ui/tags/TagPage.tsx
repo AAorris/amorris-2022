@@ -1,3 +1,5 @@
+import classNames from "classnames";
+
 import "ui/app.css";
 import styles from "./TagPage.module.css";
 import layoutStyles from "ui/home/Layout.module.css";
@@ -6,7 +8,7 @@ import Image from "next/image";
 
 const TagPage = (props: { links: Record<string, any> }) => {
   return (
-    <div className={layoutStyles.topLevel}>
+    <div>
       <div style={{ borderBottom: "1px solid rgba(0 0 0 / 3%)" }}>
         <Nav
           image={
@@ -14,7 +16,7 @@ const TagPage = (props: { links: Record<string, any> }) => {
           }
         />
       </div>
-      <div className={styles.list}>
+      <div className={classNames(styles.list, layoutStyles.topLevel)}>
         {props.links.items.map((item: Record<string, string>) => {
           return (
             <div

@@ -27,7 +27,7 @@ const Nav = (props: { image: JSX.Element }) => {
             <Link href="/">Home</Link>
           </div>
           <div className={styles.navItem}>
-            <Link href="/link">Links</Link>
+            <Link href="/links">Links</Link>
           </div>
         </div>
       </section>

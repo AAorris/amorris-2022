@@ -11,6 +11,7 @@ const Footer = () => {
           display: "flex",
           width: "100%",
           justifyContent: "space-between",
+          borderBottom: "1px solid rgb(0 0 0 / 6%)",
         }}
       >
         <section>
@@ -73,7 +74,6 @@ const Footer = () => {
           </ul>
         </section>
       </nav>
-      <hr />
       <h3>Aaron Morris</h3>
       <p>Full stack engineer • 2022 • 🇨🇦 Canada</p>
       <style jsx>{`
