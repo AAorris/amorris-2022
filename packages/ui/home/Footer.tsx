@@ -94,6 +94,12 @@ const Footer = () => {
           outline: 2px solid #ddd;
           border-radius: 5px;
         }
+        @media (max-width: 400px) {
+          nav {
+            display: flex;
+            flex-direction: column;
+          }
+        }
       `}</style>
     </footer>
   );

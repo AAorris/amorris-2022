@@ -6,6 +6,7 @@
   font-size: 40px;
   margin-block-start: 0px;
   color: #2d2d20;
+  line-height: 1em;
 }
 
 .smallSection > h4 {
@@ -49,5 +50,17 @@
 @media (min-width: 768px) {
   .preFooter {
     clip-path: ellipse(75% 100% at center top);
+  }
+}
+
+@media (max-width: 400px) {
+  .headerStyle {
+    font-size: 24px;
+  }
+  .subHeaderStyle {
+    font-size: 18px;
+  }
+  .preFooter {
+    min-height: 250px;
   }
 }

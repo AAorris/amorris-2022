@@ -63,4 +63,13 @@
   .brand {
     margin-left: -18px;
   }
+  .nav {
+    height: auto;
+    padding-bottom: 5px;
+  }
+  .navContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
 }

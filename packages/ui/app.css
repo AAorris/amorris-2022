@@ -66,3 +66,13 @@ a {
 a:hover {
   border: 2px solid rgba(0 0 0 / 20%);
 }
+
+@media (max-width: 400px) {
+  p,
+  li {
+    font-size: 14px;
+  }
+  h3 {
+    font-size: 18px;
+  }
+}
