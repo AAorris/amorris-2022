@@ -8,14 +8,17 @@ import "ui/app.css";
 import styles from "./index.module.css";
 import layoutStyles from "ui/home/Layout.module.css";
 import avatar from "../public/me-sm.jpg";
+import hero from "../public/me-lg.jpg";
 
 export default function Web() {
   return (
     <div className={styles.app}>
       <Nav image={<Image alt="" src={avatar} />} />
+      <Image alt="Picture of me!" src={hero} placeholder="blur" />
       <section className={layoutStyles.topLevel}>
         <h1 className={styles.headerStyle}>I&apos;m Aaron Morris</h1>
         <h2 className={styles.subHeaderStyle}>Full stack engineer at Zapier</h2>
+        <a href="https://linkedin.com/in/AAorris/">Connect on LinkedIn</a>
 
         <h3>
           My mission is to <b>save people time</b> at scale.

@@ -14,7 +14,7 @@ const Footer = () => {
         }}
       >
         <section>
-          <h3>About Me</h3>
+          <h2>About Me</h2>
           <ul>
             <li>
               <a href="mailto:aaorris@gmail.com">Email</a>
@@ -33,7 +33,7 @@ const Footer = () => {
           </ul>
         </section>
         <section>
-          <h3>Social Media</h3>
+          <h2>Social Media</h2>
           <ul>
             <li>
               <a href="https://twitter.com/AAorris">Twitter</a>
@@ -50,7 +50,7 @@ const Footer = () => {
           </ul>
         </section>
         <section>
-          <h3>Link Collection</h3>
+          <h2>Link Collection</h2>
           <ul>
             <li>
               <Link href="/links-tagged/tech">Tech Links</Link>
@@ -86,9 +86,6 @@ const Footer = () => {
         section {
           margin: 10px;
           padding: 10px 20px;
-        }
-        section a {
-          font-weight: 500;
         }
         section > h3 {
           margin-block-start: 0;
