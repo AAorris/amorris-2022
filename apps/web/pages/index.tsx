@@ -12,7 +12,7 @@ import avatar from "../public/me-sm.jpg";
 export default function Web() {
   return (
     <div className={styles.app}>
-      <Nav image={<Image alt="" src={avatar}></Image>} />
+      <Nav image={<Image alt="" src={avatar} />} />
       <section className={layoutStyles.topLevel}>
         <h1 className={styles.headerStyle}>I&apos;m Aaron Morris</h1>
         <h2 className={styles.subHeaderStyle}>Full stack engineer at Zapier</h2>
@@ -47,7 +47,7 @@ export default function Web() {
             display: "flex",
             alignItems: "center",
             flexDirection: "column",
-            gap: 20
+            gap: 20,
           }}
         >
           <h2 className={styles.subHeaderStyle} style={{ color: "white" }}>

@@ -53,22 +53,22 @@ const Footer = () => {
           <h3>Link Collection</h3>
           <ul>
             <li>
-              <a href="/links-tagged/tech">Tech Links</a>
+              <Link href="/links-tagged/tech">Tech Links</Link>
             </li>
             <li>
-              <a href="/links-tagged/web">Web Links</a>
+              <Link href="/links-tagged/web">Web Links</Link>
             </li>
             <li>
-              <a href="/links-tagged/home">Home Links</a>
+              <Link href="/links-tagged/home">Home Links</Link>
             </li>
             <li>
-              <a href="/links-tagged/js">JS Links</a>
+              <Link href="/links-tagged/js">JS Links</Link>
             </li>
             <li>
-              <a href="/links-tagged/ml">ML Links</a>
+              <Link href="/links-tagged/ml">ML Links</Link>
             </li>
             <li>
-              <a href="/links-tagged/life">Life Links</a>
+              <Link href="/links-tagged/life">Life Links</Link>
             </li>
           </ul>
         </section>

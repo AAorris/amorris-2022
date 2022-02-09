@@ -3,7 +3,6 @@ import styles from "./TagPage.module.css";
 import layoutStyles from "ui/home/Layout.module.css";
 import Nav from "ui/home/Nav";
 import Image from "next/image";
-// import avatar from "/public/me-sm.jpg";
 
 const TagPage = (props) => {
   return (
@@ -16,7 +15,7 @@ const TagPage = (props) => {
         />
       </div>
       <div className={styles.list}>
-        {props.links.items.map((item) => {
+        {props.links.items.map((item: Record<string, string>) => {
           return (
             <div
               className={styles.item}
@@ -33,7 +32,7 @@ const TagPage = (props) => {
                 <div className={styles.subtitle}>{item.subtitle}</div>
               </a>
               <div className={styles.tags}>
-                {item.tags.split(/,/).map((tag) => {
+                {item.tags.split(/,/).map((tag: string) => {
                   return (
                     <a className={styles.tag} key={tag} href={tag}>
                       {`#${tag}`}
