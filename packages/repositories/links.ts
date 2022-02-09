@@ -1,19 +1,15 @@
-const aws = require("aws-sdk");
 const {
   DynamoDBClient,
   QueryCommand,
   ScanCommand,
 } = require("@aws-sdk/client-dynamodb");
 
-aws.config.update({
+const client = new DynamoDBClient({
+  region: "us-west-2",
   credentials: {
     accessKeyId: process.env.DDB_ACCESS_KEY_ID,
     secretAccessKey: process.env.DDB_SECRET_ACCESS_KEY,
   },
-});
-
-const client = new DynamoDBClient({
-  region: "us-west-2",
 });
 
 export const getLinksForTag = async (table, tag) => {
