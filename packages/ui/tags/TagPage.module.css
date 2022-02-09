@@ -1,0 +1,54 @@
+.list {
+  width: 100%;
+  box-sizing: border-box;
+  display: block;
+  padding: 10px;
+  border-left: 2px solid rgb(0 0 0 / 3%);
+  border-right: 2px solid rgb(0 0 0 / 3%);
+}
+.item {
+  width: 100%;
+  box-sizing: border-box;
+  display: block;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+.body {
+  width: 100%;
+  box-sizing: border-box;
+  display: block;
+  padding: 10px;
+  margin-bottom: 5px;
+  color: #444;
+  background: white;
+}
+.body .uri {
+  font-size: 32px;
+  letter-spacing: -0.05em;
+  font-weight: 800;
+  display: block;
+  margin-block-end: 0;
+  margin-bottom: -10px;
+}
+.body .context {
+  font-weight: 400;
+  font-size: 18px;
+  display: block;
+}
+.body .subtitle {
+  font-size: 24px;
+  padding-top: 5px;
+  line-height: 1em;
+  font-weight: 600;
+}
+.tag {
+  background: #fafafa;
+  color: #555;
+  font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  .list {
+    padding: 20px;
+  }
+}
