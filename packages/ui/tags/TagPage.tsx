@@ -1,6 +1,6 @@
 import "ui/app.css";
 import styles from "./TagPage.module.css";
-import layoutStyles from "ui/home/layout.module.css";
+import layoutStyles from "ui/home/Layout.module.css";
 import Nav from "ui/home/Nav";
 import Image from "next/image";
 // import avatar from "/public/me-sm.jpg";

@@ -1,7 +1,7 @@
 import * as React from "react";
 import Link from "next/link";
 import classnames from "classnames";
-import layoutStyles from "ui/home/layout.module.css";
+import layoutStyles from "ui/home/Layout.module.css";
 
 const Footer = () => {
   return (
