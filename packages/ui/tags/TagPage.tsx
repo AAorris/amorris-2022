@@ -4,7 +4,7 @@ import layoutStyles from "ui/home/Layout.module.css";
 import Nav from "ui/home/Nav";
 import Image from "next/image";
 
-const TagPage = (props) => {
+const TagPage = (props: { links: Record<string, any> }) => {
   return (
     <div className={layoutStyles.topLevel}>
       <div style={{ borderBottom: "1px solid rgba(0 0 0 / 3%)" }}>
