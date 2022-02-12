@@ -1,48 +1,38 @@
-const {
-  DynamoDBClient,
-  QueryCommand,
-  ScanCommand,
-} = require("@aws-sdk/client-dynamodb");
+import { DynamoDBClient } from "@aws-sdk/client-dynamodb";
+import { DynamoDBDocument } from "@aws-sdk/lib-dynamodb";
 
-const client = new DynamoDBClient({
-  region: "us-west-2",
-  credentials: {
-    accessKeyId: process.env.DDB_ACCESS_KEY_ID,
-    secretAccessKey: process.env.DDB_SECRET_ACCESS_KEY,
+const baseClient = new DynamoDBClient({ region: "us-west-2" });
+const client = DynamoDBDocument.from(baseClient, {
+  marshallOptions: {
+    convertClassInstanceToMap: true,
   },
 });
 
 export const getLinksForTag = async (table, tag) => {
-  // Try also: KeyConditionExpression: "pk = :pk and begins_with(sk, :q)",
-  const command = new QueryCommand({
+  const result = await client.query({
     KeyConditionExpression: "pk = :pk",
     ExpressionAttributeValues: {
-      ":pk": { S: tag },
+      ":pk": tag,
     },
     TableName: table,
+    ScanIndexForward: false,
+    Limit: 25,
   });
-  const result = await client.send(command);
-  const items = result.Items.map((item) =>
-    Object.fromEntries(
-      Object.entries(item).map(([key, value]) => {
-        return [key.trim(), value["S"]];
-      })
-    )
-  );
-  return { key: result.LastEvaluatedKey || null, items };
+  return {
+    items: result.Items,
+  };
 };
 
-export const getLinks = async (table) => {
-  const command = new ScanCommand({
+export const getTags = async (table) => {
+  const result = await client.query({
+    KeyConditionExpression: "pk = :pk",
+    ExpressionAttributeValues: {
+      ":pk": "//tags",
+    },
     TableName: table,
+    ScanIndexForward: false,
   });
-  const result = await client.send(command);
-  const items = result.Items.map((item) =>
-    Object.fromEntries(
-      Object.entries(item).map(([key, value]) => {
-        return [key.trim(), value["S"]];
-      })
-    )
-  ).sort();
-  return { key: result.LastEvaluatedKey || null, items };
+  return {
+    items: result.Items,
+  };
 };

@@ -10,5 +10,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.50.0",
+    "@aws-sdk/lib-dynamodb": "^3.50.0",
+    "@aws-sdk/types": "^3.50.0"
+  }
 }

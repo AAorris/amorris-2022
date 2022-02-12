@@ -8,7 +8,7 @@ export async function getStaticProps({ params }) {
   return {
     props: {
       links: await require("repositories/links").getLinksForTag(
-        "amorris-links-01",
+        "amorris-links-03",
         params.tag
       ),
     },

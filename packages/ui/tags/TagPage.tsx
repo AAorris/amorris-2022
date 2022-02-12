@@ -3,10 +3,11 @@ import classNames from "classnames";
 import "ui/app.css";
 import styles from "./TagPage.module.css";
 import layoutStyles from "ui/home/Layout.module.css";
+import { ago } from "ui/relativeTime";
 import Nav from "ui/home/Nav";
 import Image from "next/image";
 
-const TagPage = (props: { links: Record<string, any> }) => {
+const TagPage = (props: { links: Record<string, any>; next?: string }) => {
   return (
     <div>
       <div style={{ borderBottom: "1px solid rgba(0 0 0 / 3%)" }}>
@@ -29,7 +30,7 @@ const TagPage = (props: { links: Record<string, any> }) => {
                 <span className={styles.context}>
                   {new URL(item.url).host}
                   <span className={styles.contextSpacer}> — </span>
-                  {item.shared}
+                  {ago(new Date(item.shared).getTime())} ago
                 </span>
                 <div className={styles.subtitle}>{item.subtitle}</div>
               </a>

@@ -1,4 +1,4 @@
-﻿uri,subtitle,tags,url,uid,shared,type
+uri,subtitle,tags,url,uid,shared,type
 ulid,time ordered UUIDs,tech,https://github.com/ulid/spec,487,2022-02-02,
 Single table design,Putting all your app data in one table,"NoSQL,web,tech",https://www.alexdebrie.com/posts/dynamodb-single-table/,486,2022-02-01,
 NoSQL Workbench,Basically a DynamoDB table designer,"web,tech",https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/workbench.Modeler.html,485,2022-02-01,
