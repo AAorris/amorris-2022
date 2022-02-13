@@ -7,6 +7,8 @@
 }
 
 body {
+  background: black;
+  color: white;
   margin: 0;
   font-family: "Khula", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -35,7 +37,6 @@ h3 + p {
 }
 
 h4 {
-  color: #222;
   font-size: 22px;
   margin-block-end: 0;
 }
@@ -44,7 +45,7 @@ p,
 li {
   font-size: 20px;
   letter-spacing: -0.03em;
-  color: #222;
+  color: #ddd;
 }
 
 .brandImage > span {
@@ -56,15 +57,14 @@ a {
   place-items: center;
   padding: 0px 8px;
   margin: 0 2px;
-  border: 2px solid rgba(0 0 0 / 2%);
+  border: 2px solid rgba(255 255 255 / 2%);
   border-radius: 5px;
-  color: #222;
-  font-weight: bold;
+  color: #ccc;
   text-decoration: none;
 }
 
 a:hover {
-  border: 2px solid rgba(0 0 0 / 20%);
+  border: 2px solid rgba(255 255 255 / 20%);
 }
 
 @media (max-width: 400px) {

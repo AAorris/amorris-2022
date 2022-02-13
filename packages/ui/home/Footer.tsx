@@ -18,7 +18,7 @@ const Footer = () => {
           <h2>About Me</h2>
           <ul>
             <li>
-              <a href="mailto:aaorris@gmail.com">Email</a>
+              <a href="mailto:hey@amorris.ca">Email</a>
             </li>
             <li>
               <a href="https://www.google.com/maps/place/Ontario/">Location</a>
@@ -45,37 +45,31 @@ const Footer = () => {
             <li>
               <a href="https://linkedin.com/in/AAorris">LinkedIn</a>
             </li>
-            <li>
-              <a href="https://www.instagram.com/amorrisa/">Instagram</a>
-            </li>
           </ul>
         </section>
         <section>
-          <h2>Link Collection</h2>
+          <h2>Some Links</h2>
           <ul>
             <li>
-              <Link href="/links-tagged/tech">Tech Links</Link>
+              <Link href="/links-tagged/home">#home</Link>
             </li>
             <li>
-              <Link href="/links-tagged/web">Web Links</Link>
+              <Link href="/links-tagged/web">#web</Link>
             </li>
             <li>
-              <Link href="/links-tagged/home">Home Links</Link>
+              <Link href="/links-tagged/js">#js</Link>
             </li>
             <li>
-              <Link href="/links-tagged/js">JS Links</Link>
-            </li>
-            <li>
-              <Link href="/links-tagged/ml">ML Links</Link>
-            </li>
-            <li>
-              <Link href="/links-tagged/life">Life Links</Link>
+              <Link href="/links-tagged/tech">#tech</Link>
             </li>
           </ul>
         </section>
       </nav>
-      <h3>Aaron Morris</h3>
-      <p>Full stack engineer • 2022 • 🇨🇦 Canada</p>
+      <h3 className="name">Aaron Morris</h3>
+      <div className="bottomRow">
+        <p>Made in 🇨🇦 Canada • 2022</p>
+        <p>Contact me at hey@amorris.ca</p>
+      </div>
       <style jsx>{`
         ul {
           display: grid;
@@ -89,6 +83,17 @@ const Footer = () => {
         }
         section > h3 {
           margin-block-start: 0;
+        }
+        .name {
+          font-weight: 800;
+          letter-spacing: 0;
+          font-size: 40px;
+          margin-block-end: -25px;
+        }
+        .bottomRow {
+          display: flex;
+          justify-content: space-between;
+          color: #ccc;
         }
         section:focus-within {
           outline: 2px solid #ddd;

@@ -18,22 +18,43 @@ export default function Web() {
         <Image alt="Picture of me" src={hero} placeholder="blur" />
       </div>
       <section className={layoutStyles.topLevel}>
-        <h1 className={styles.headerStyle}>I&apos;m Aaron Morris</h1>
-        <h2 className={styles.subHeaderStyle}>Full stack engineer at Zapier</h2>
-        <a href="https://linkedin.com/in/AAorris/">Connect on LinkedIn</a>
+        <div className={styles.heroIntro}>
+          <h1 className={styles.headerStyle}>Aaron Morris</h1>
+          <h2 className={styles.subHeaderStyle}>
+            Full stack engineer at <span className={styles.zapier}>Zapier</span>
+          </h2>
+          <a href="https://linkedin.com/in/AAorris/">Connect on LinkedIn</a>
+        </div>
 
-        <h3>
-          My mission is to <b>save people time for what matters</b> at scale.
-        </h3>
+        <div className={styles.heroIntro}>
+          <h2>What&apos;s in your way?</h2>
+          <p>
+            There&apos;s something eating your time; draining energy; getting
+            between you and your top priorities. Let&apos;s change that, and
+            spend more time on what matters. What will it feel like when there
+            is nothing left in your way?
+          </p>
+        </div>
 
-        <h3>How can we work together?</h3>
-        <p>
-          If you are a parent, entrepreneur, engineer, founder, Let&apos;s
-          connect. If you&apos;re starting down the path into engineering, feel
-          free to reach out for some free mentorship time. Just browsing? Maybe
-          get a glimpse into my brain by browsing my{" "}
-          <Link href="/links">links</Link>
-        </p>
+        <div className={styles.heroIntro}>
+          <h2>How can I help?</h2>
+          <p>
+            I build web apps, and as a full stack engineer I&apos;m well suited
+            to accelerating new projects or being a maintainer of complex and
+            mature infrastructure. I love to mentor new engineers and help debug
+            and solve problems.
+          </p>
+        </div>
+
+        <div className={styles.heroIntro}>
+          <h2>What&apos;s here?</h2>
+          <p>
+            I have hundreds of <Link href="/links-tagged">Links</Link> I found
+            interesting over the last few years on various (mostly tech) topics.
+            You might find some of them interesting or useful. You can also find
+            places to connect with me down below.
+          </p>
+        </div>
       </section>
       <div style={{ height: 70 }} />
       <div className={styles.preFooter}>
