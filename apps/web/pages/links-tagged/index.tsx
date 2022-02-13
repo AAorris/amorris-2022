@@ -1,3 +1,4 @@
+import Head from "next/head";
 import TagIndexPage from "ui/tags/TagIndexPage";
 
 export async function getStaticProps() {
@@ -9,4 +10,13 @@ export async function getStaticProps() {
   };
 }
 
-export default TagIndexPage;
+const Page = (props) => (
+  <>
+    <Head>
+      <title>Links</title>
+    </Head>
+    <TagIndexPage {...props} />
+  </>
+);
+
+export default Page;

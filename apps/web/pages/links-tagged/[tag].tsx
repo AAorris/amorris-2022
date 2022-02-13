@@ -1,3 +1,4 @@
+import Head from "next/head";
 import TagPage from "ui/tags/TagPage";
 
 export const getStaticPaths = async () => {
@@ -11,9 +12,19 @@ export async function getStaticProps({ params }) {
         "amorris-links-03",
         params.tag
       ),
+      tag: params.tag,
     },
     revalidate: 3600,
   };
 }
 
-export default TagPage;
+const Page = (props) => (
+  <>
+    <Head>
+      <title>#{props.tag} links | amorris.ca</title>
+    </Head>
+    <TagPage {...props} />
+  </>
+);
+
+export default Page;

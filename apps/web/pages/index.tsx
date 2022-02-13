@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -14,6 +15,9 @@ export default function Web() {
   return (
     <div className={styles.app}>
       <Nav image={<Image alt="" src={avatar} />} />
+      <Head>
+        <title>Aaron Morris</title>
+      </Head>
       <div className={styles.heroImage}>
         <Image alt="Picture of me" src={hero} placeholder="blur" />
       </div>

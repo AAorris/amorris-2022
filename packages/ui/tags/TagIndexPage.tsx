@@ -23,12 +23,16 @@ const TagPage = (props: { tags: any }) => {
         />
       </div>
       <div className={layoutStyles.topLevel} style={{ marginTop: 50 }}>
-        <h2>About these links</h2>
+        <h2>I started saving links.</h2>
         <p>
-          I started saving links in a flat file. Then it was an experiment in my
-          information bias — Is my information consumption balanced? (no) — Now
-          it&apos;s a litmus test for database technology. From static text to
-          Sqlite to Airtable to DynamoDB, always in search of free-tier nirvana.
+          At first, I started saving links in a flat file. Then it was an
+          experiment in quantifying my attention — Do I spend the time I want on
+          the different topics I would like to? The answer is no, I currently
+          have a strong bias towards tech content, when I would like more
+          balance into parenting, cooking, finance, and the arts. it&apos;s also
+          a litmus test for database technology. From static text to Sqlite to
+          Airtable to Sheets to DynamoDB, I&apos;m always in search of
+          "free-tier nirvana".
         </p>
         <h2>How it works</h2>
         <p>
