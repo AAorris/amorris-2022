@@ -22,7 +22,6 @@ export const getLinksForTag = async (table, tag) => {
     },
     TableName: table,
     ScanIndexForward: false,
-    Limit: 25,
   });
   return {
     items: result.Items,
