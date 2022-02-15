@@ -50,7 +50,7 @@ const TagPage = (props: { tags: any }) => {
             return -(left.count - right.count);
           })
           .map((item: any) => (
-            <div className={styles.tagDetail}>
+            <div className={styles.tagDetail} key={`${item.pk}/${item.sk}`}>
               <div className={styles.header}>
                 <h2>
                   <Link

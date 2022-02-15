@@ -100,7 +100,7 @@ const Infrastructure = () => (
       <path
         d="M187.011 37.4122L184.164 38.7865L177.184 32.9007C177.228 32.8567 177.277 32.8204 177.329 32.7917C177.473 32.7055 177.678 32.6825 177.852 32.7514L186.963 36.3614C187.426 36.5451 187.462 37.1941 187.011 37.4122Z"
         fill="black"
-        fill-opacity="0.25"
+        fillOpacity="0.25"
       />
     </g>
     <defs>
@@ -112,8 +112,8 @@ const Infrastructure = () => (
         gradientUnits="userSpaceOnUse"
         gradientTransform="translate(188 80) rotate(140.749) scale(52.9457 52.1185)"
       >
-        <stop stop-color="white" stop-opacity="0.22" />
-        <stop offset="1" stop-color="white" stop-opacity="0" />
+        <stop stopColor="white" stopOpacity="0.22" />
+        <stop offset="1" stopColor="white" stopOpacity="0" />
       </radialGradient>
       <clipPath id="clip0_2_2">
         <rect width="258" height="122" fill="white" />
