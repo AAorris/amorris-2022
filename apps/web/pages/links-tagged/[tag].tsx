@@ -1,5 +1,6 @@
 import Head from "next/head";
 import TagPage from "ui/tags/TagPage";
+import NativeIcons from "ui/home/NativeIcons";
 
 export const getStaticPaths = async () => {
   return { paths: [], fallback: "blocking" };
@@ -22,6 +23,7 @@ const Page = (props) => (
   <>
     <Head>
       <title>#{props.tag} links | amorris.ca</title>
+      <NativeIcons />
     </Head>
     <TagPage {...props} />
   </>

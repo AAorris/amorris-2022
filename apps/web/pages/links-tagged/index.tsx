@@ -1,5 +1,6 @@
 import Head from "next/head";
 import TagIndexPage from "ui/tags/TagIndexPage";
+import NativeIcons from "ui/home/NativeIcons";
 
 export async function getStaticProps() {
   return {
@@ -14,6 +15,7 @@ const Page = (props) => (
   <>
     <Head>
       <title>Links</title>
+      <NativeIcons />
     </Head>
     <TagIndexPage {...props} />
   </>
