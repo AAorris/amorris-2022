@@ -105,6 +105,9 @@
 }
 
 @media (max-width: 600px) {
+  .heroIntro h1 {
+    font-size: 72px;
+  }
   .heroIntro h2 {
     font-size: 56px;
   }

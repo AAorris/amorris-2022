@@ -68,21 +68,19 @@ const Footer = () => {
       <h3 className="name">Aaron Morris</h3>
       <div className="bottomRow">
         <p>Made in 🇨🇦 Canada • 2022</p>
-        <p>Contact me at hey@amorris.ca</p>
+        <p className="right">Contact me at hey@amorris.ca</p>
       </div>
       <style jsx>{`
         ul {
           display: grid;
-          gap: 10px;
           list-style-type: none;
           padding-inline-start: 0px;
         }
-        section {
-          margin: 10px;
-          padding: 10px 20px;
-        }
         section > h3 {
           margin-block-start: 0;
+        }
+        .bottomRow > .right {
+          text-align: right;
         }
         .name {
           font-weight: 800;
@@ -103,6 +101,17 @@ const Footer = () => {
           nav {
             display: flex;
             flex-direction: column;
+            justify-content: center;
+            text-align: center;
+          }
+        }
+        @media (min-width: 500px) {
+          ul {
+            gap: 10px;
+          }
+          section {
+            margin: 10px;
+            padding: 10px 20px;
           }
         }
       `}</style>
