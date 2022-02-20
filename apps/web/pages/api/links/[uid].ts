@@ -6,6 +6,7 @@ export default async function handler(
   res: NextApiResponse
 ) {
   if (
+    /** TODO: API auth package */
     req.method === "DELETE" &&
     process.env.API_SESSION_KEY &&
     req.cookies.sessionKey === process.env.API_SESSION_KEY

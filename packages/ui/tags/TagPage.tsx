@@ -16,6 +16,10 @@ const deletionClasses: Record<number, string> = {
 function Link(props) {
   const { item } = props;
   const [deleted, setDeleted] = useState(0);
+  let host = "";
+  try {
+    host = new URL(item.url).host;
+  } catch (e) {}
   return (
     <div
       className={classNames(styles.item, deletionClasses[deleted])}
@@ -25,7 +29,7 @@ function Link(props) {
       <a className={styles.body} href={item.url}>
         <span className={styles.uri}>{item.uri}</span>
         <span className={styles.context}>
-          {new URL(item.url).host}
+          {host}
           <span className={styles.contextSpacer}> — </span>
           {ago(new Date(item.shared).getTime())} ago
         </span>
