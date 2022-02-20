@@ -22,7 +22,7 @@ type Insertions = {
    * Ex. `2020-04-26/js/153`
    *  - Sort by date, tag, id
    */
-  getSortKey: (pk: string, data: {}) => string;
+  getSortKey: (pk: string, data: any) => string;
 };
 
 const getFindArgs = (bucket: PartitionID) => ({

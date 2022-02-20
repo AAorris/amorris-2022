@@ -25,7 +25,8 @@ export default async function handler(
     /** TODO: API auth package */
     req.method === "PUT" &&
     process.env.API_SESSION_KEY &&
-    req.cookies.sessionKey === process.env.API_SESSION_KEY
+    (req.cookies.sessionKey === process.env.API_SESSION_KEY ||
+      req.headers.authorization === `token ${process.env.API_SESSION_KEY}`)
   ) {
     try {
       await doPutLink(req);

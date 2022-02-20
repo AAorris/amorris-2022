@@ -31,7 +31,7 @@ export const createLink = async (table, args: CreateLinkArgs) => {
     table,
     item,
     duplicate: "tags",
-    getSortKey(tag, data: CreateLink) {
+    getSortKey(tag, data: { shared: string; uid: string }) {
       return `${data.shared}/${tag}/${data.uid}`;
     },
   });
