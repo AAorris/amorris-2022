@@ -88,6 +88,32 @@
   animation: flow 30s linear;
   animation-iteration-count: infinite;
 }
+.linkDeleted {
+  border: 2px solid red;
+}
+.linkDeleting {
+  border: 2px solid rgb(129, 56, 56);
+}
+.button {
+  background: #ff00001a;
+  color: #ff6060;
+  outline: none;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px;
+  cursor: pointer;
+  outline: 2px solid transparent;
+}
+.button:hover {
+  outline: 2px solid red;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: inline-block;
+}
 @keyframes flow {
   to {
     stroke-dashoffset: -200;
