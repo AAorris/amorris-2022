@@ -1,4 +1,3 @@
-import App from "next/app";
 import PageProgressBar from "ui/PageProgressBar";
 
 function MyApp({ Component, pageProps }) {

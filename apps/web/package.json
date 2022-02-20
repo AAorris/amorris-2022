@@ -13,9 +13,9 @@
     "@aws-sdk/lib-dynamodb": "^3.50.0",
     "@aws-sdk/types": "^3.50.0",
     "aws-crt": "^1.10.6",
-    "next": "12.0.8",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
+    "next": "^12.1.0",
+    "react": "^18.0.0-rc.0",
+    "react-dom": "^18.0.0-rc.0",
     "repositories": "*",
     "ui": "*"
   },
