@@ -3,7 +3,7 @@ import { find, deleteSome } from "./details/dynamoKeyValue";
 
 // We create a secondary index "uid-index"
 // with only-keys
-export const deleteLink = async (table, uid) => {
+export const deleteLink = async (table, uid): Promise<any> => {
   const result = await deleteSome({ table, uid });
   return result;
 };
