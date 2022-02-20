@@ -29,7 +29,7 @@ export async function find(bucket: PartitionID) {
  *   and query it to get the pk/sk needed to delete the items.
  *  TODO: batch delete
  */
-export async function deleteSome(item: ItemID) {
+export async function deleteSome(item: ItemID): Promise<any> {
   const { table, uid } = item;
 
   // Find as usual, but with a secondary index.
