@@ -13,14 +13,28 @@ pre {
 
 body,
 p {
-  background: white;
-  color: black;
+  background: #fafafa;
+  color: #111;
 }
 
-p {
+blockquote {
+  border-left: 3px solid black;
+  margin-left: 0;
+  padding-left: 8px;
+  padding-top: 8px;
+}
+blockquote :first-child {
+  margin-block-start: 0;
+  padding-top: 0;
+}
+
+p,
+ul,
+li {
   color: #333;
-  font-size: 18px;
-  line-height: 1.125em;
+  font-size: 16px;
+  line-height: 22px;
+  text-size-adjust: 100%;
 }
 
 h1,
@@ -28,6 +42,15 @@ h2 {
   letter-spacing: -0.05em;
 }
 
+h1 {
+  font-size: 48px;
+}
+
 a {
   color: #444;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+  text-decoration: underline;
+  text-decoration-color: #ccc;
 }

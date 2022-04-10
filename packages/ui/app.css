@@ -14,7 +14,7 @@ body {
 }
 
 h1 {
-  font-size: 72px;
+  /* font-size: 72px; */
   font-family: var(--font-accent);
   letter-spacing: -0.09em;
 }
@@ -27,7 +27,7 @@ h2 {
 h3 {
   letter-spacing: -0.05em;
   font-weight: 500;
-  font-size: 28px;
+  /* font-size: 28px; */
   margin-block-start: 1em;
   margin-block-end: 0em;
 }
@@ -37,13 +37,13 @@ h3 + p {
 }
 
 h4 {
-  font-size: 22px;
+  /* font-size: 22px; */
   margin-block-end: 0;
 }
 
 p,
 li {
-  font-size: 20px;
+  /* font-size: 20px; */
   letter-spacing: -0.03em;
   color: #ddd;
 }
@@ -65,14 +65,4 @@ a {
 
 a:hover {
   border: 2px solid rgba(255 255 255 / 20%);
-}
-
-@media (max-width: 400px) {
-  p,
-  li {
-    font-size: 14px;
-  }
-  h3 {
-    font-size: 18px;
-  }
 }

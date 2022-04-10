@@ -3,7 +3,6 @@
 }
 
 .subHeaderStyle {
-  font-size: 40px;
   margin-block-start: 0px;
   line-height: 1em;
 }
@@ -29,7 +28,6 @@
   border: 2px solid #aaa;
   color: white;
   font-weight: 500;
-  font-size: 24px;
   padding: 10px 40px;
 }
 
@@ -55,19 +53,19 @@
 }
 
 .heroIntro h1 {
-  font-size: 120px;
+  font-size: 500%;
 }
 .heroIntro h2 {
-  font-size: 64px;
+  font-size: 250%;
   color: #eee;
 }
 .heroIntro p {
-  font-size: 24px;
+  font-size: 120%;
   color: #bbb;
 }
 .heroIntro a {
   padding: 15px;
-  font-size: 24px;
+  font-size: 120%;
   border: 1px solid rgba(255 255 255 / 18%);
 }
 .heroIntro a:hover,
@@ -93,22 +91,10 @@
 }
 
 @media (max-width: 400px) {
-  .headerStyle {
-    font-size: 24px;
-  }
-  .subHeaderStyle {
-    font-size: 18px;
-  }
   .preFooter {
     min-height: 250px;
   }
 }
 
 @media (max-width: 600px) {
-  .heroIntro h1 {
-    font-size: 72px;
-  }
-  .heroIntro h2 {
-    font-size: 56px;
-  }
 }

@@ -26,40 +26,7 @@ export default function Web() {
       <section className={layoutStyles.topLevel}>
         <div className={styles.heroIntro}>
           <h1 className={styles.headerStyle}>Aaron Morris</h1>
-          <h2 className={styles.subHeaderStyle}>
-            Full stack engineer at <span className={styles.zapier}>Zapier</span>
-          </h2>
-          <a href="https://linkedin.com/in/AAorris/">Connect on LinkedIn</a>
-        </div>
-
-        <div className={styles.heroIntro}>
-          <h2>What&apos;s in your way?</h2>
-          <p>
-            There&apos;s something eating your time; draining energy; getting
-            between you and your top priorities. Let&apos;s change that, and
-            spend more time on what matters. What will it feel like when there
-            is nothing left in your way?
-          </p>
-        </div>
-
-        <div className={styles.heroIntro}>
-          <h2>How can I help?</h2>
-          <p>
-            I build web apps, and as a full stack engineer I&apos;m well suited
-            to accelerating new projects or being a maintainer of complex and
-            mature infrastructure. I love to mentor new engineers and help debug
-            and solve problems.
-          </p>
-        </div>
-
-        <div className={styles.heroIntro}>
-          <h2>What&apos;s here?</h2>
-          <p>
-            I have hundreds of <Link href="/links-tagged">Links</Link> I found
-            interesting over the last few years on various (mostly tech) topics.
-            You might find some of them interesting or useful. You can also find
-            places to connect with me down below.
-          </p>
+          <h2>Starting something new</h2>
         </div>
       </section>
       <div style={{ height: 70 }} />

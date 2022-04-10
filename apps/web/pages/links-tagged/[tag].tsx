@@ -15,7 +15,7 @@ export async function getStaticProps({ params }) {
       ),
       tag: params.tag,
     },
-    revalidate: 3600,
+    revalidate: 1,
   };
 }
 

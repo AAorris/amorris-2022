@@ -23,7 +23,6 @@
   margin-bottom: 5px;
 }
 .body .uri {
-  font-size: 32px;
   letter-spacing: -0.05em;
   font-weight: 700;
   display: block;
@@ -34,12 +33,10 @@
 }
 .body .context {
   font-weight: 400;
-  font-size: 18px;
   display: block;
   color: #888;
 }
 .body .subtitle {
-  font-size: 24px;
   padding-top: 5px;
   line-height: 1em;
   font-weight: 500;
