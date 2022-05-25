@@ -27,7 +27,7 @@ export default function Web() {
         <div className={styles.heroIntro}>
           <h1 className={styles.headerStyle}>Aaron Morris</h1>
           <h2 className={styles.subHeaderStyle}>
-            Full stack engineer at <span className={styles.zapier}>Zapier</span>
+            Full stack engineer at <span className={styles.zapier}>Vercel</span>
           </h2>
           <a href="https://linkedin.com/in/AAorris/">Connect on LinkedIn</a>
         </div>
