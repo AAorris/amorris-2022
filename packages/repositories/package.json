@@ -12,9 +12,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@aws-sdk/client-dynamodb": "^3.50.0",
-    "@aws-sdk/lib-dynamodb": "^3.50.0",
-    "@aws-sdk/types": "^3.50.0",
+    "@aws-sdk/client-dynamodb": "^3.105.0",
+    "@aws-sdk/lib-dynamodb": "^3.105.0",
+    "@aws-sdk/types": "^3.78.0",
     "ulid": "^2.3.0"
   }
 }
