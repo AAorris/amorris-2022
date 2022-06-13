@@ -6,15 +6,15 @@
   "license": "MIT",
   "devDependencies": {
     "@types/nprogress": "^0.2.0",
-    "@types/react": "^17.0.37",
-    "@types/react-dom": "^17.0.11",
+    "@types/react": "^18.0.12",
+    "@types/react-dom": "^18.0.5",
     "classnames": "^2.3.1",
     "config": "*",
     "tsconfig": "*",
-    "typescript": "^4.5.3"
+    "typescript": "^4.7.3"
   },
   "dependencies": {
-    "nextjs-progressbar": "^0.0.13",
+    "nextjs-progressbar": "^0.0.14",
     "nprogress": "^0.2.0"
   }
 }
