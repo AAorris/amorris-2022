@@ -18,6 +18,7 @@ export default function Home() {
           <li>
             <a
               target="_blank"
+              rel="noreferrer"
               href="https://links.amorris.ca"
               className="underline underline-offset-2"
             >
@@ -27,6 +28,7 @@ export default function Home() {
           <li>
             <a
               target="_blank"
+              rel="noreferrer"
               href="https://demo-knock-app-amorris.vercel.app/"
               className="underline underline-offset-2"
             >
