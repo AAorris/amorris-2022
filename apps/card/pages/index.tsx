@@ -10,7 +10,7 @@ export default function Home() {
       </Head>
       <main className="border-gray-600 border-solid border-2 p-4 rounded">
         <h1>Aaron Morris</h1>
-        <p className="text-gray-500 m-0 p-0">Software engineer at Vercel</p>
+        <p className="text-gray-500 m-0 p-0">Software Engineer at Vercel</p>
         <p className="pb-2">
           <mark>Under renovation for a bit.</mark>
         </p>
