@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-fallback: -apple-system,"BlinkMacSystemFont","Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+  --font-display: "Inter",var(--font-fallback);
+  --font-sans: "Sohne",var(--font-fallback);
+  --font-mono: "Menlo",monospace;
+  --font-serif: "Newsreader","Signifier","Times",serif;
+  --white: #fff;
+  --black: #000;
+  --basics-gap: 0.5rem;
+  --gap-sm: 4px;
+  --gap: 8px;
+  --gap-2x: 16px;
+  --gap-3x: 24px;
+  --gap-4x: 32px;
+  --gap-6x: 48px;
+  --gap-8x: 64px;
+  --gap-12x: 72px;
+  --gap-16x: 128px;
+  --type: var(--text) /var(--leading) var(--font-sans);
+  --type-code: 13px/1.7 var(--font-mono);
+  --type-em: 400 italic calc(1em + 1px) /normal var(--font-serif);
+  --type-sm: var(--text-sm) /var(--leading-sm) var(--font-sans);
+  --type-lg: var(--text-lg) /var(--leading-lg) var(--font-sans);
+  --type-heading: 500 var(--text) /var(--leading) var(--font-display);
+  --type-button: 400 14px/var(--height,normal) var(--font-sans);
+  --type-heading-lg: 500 var(--text-lg) /var(--leading-lg) var(--font-display);
+  --leading-2xl: 54px;
+  --leading-xl: 40px;
+  --leading-lg: 32px;
+  --leading: 28px;
+  --leading-sm: 20px;
+  --leading-xs: 18px;
+  --text-2xl: 30px;
+  --text-xl: 24px;
+  --text-lg: 20px;
+  --text: 16px;
+  --text-sm: 14px;
+  --text-xs: 12px;
+  --text-xxs: 10px;
+  --kerning-lg: -0.33px;
+  --radius-xl: 14px;
+  --radius-lg: 10px;
+  --radius: 8px;
+  --radius-sm: 5px;
+  --radius-xs: 3px;
+  --transition-fast: 100ms;
+  --transition-med: 160ms;
+  --transition-xx: 240ms;
+  --transition-long: 480ms;
+  --transition-slow: 1200ms;
+  --shadow-sm: 0 2px 20px 1px var(--shadow-color);
+  --noise-1: url("data:image/svg+xml,%3Csvg viewBox='0 0 1024 1024' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.25' numOctaves='1' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")
+}
+
+body[data-theme='dark'] {
+  background: black;
+  color: white;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}

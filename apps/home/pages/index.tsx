@@ -1,16 +1,23 @@
 import Head from "next/head";
+import Header from "../components/header";
+import layoutClass from "../components/ui/tailwind/layout";
+import navClass from "../components/ui/tailwind/nav";
+import textClass from "../components/ui/tailwind/text";
 
 export default function Home() {
   return (
-    <div className="p-4 grid place-items-center h-[100vh">
+    <div className={""}>
       <Head>
         <title>Aaron Morris</title>
         <meta name="description" content="Full stack engineer at Vercel" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="border-gray-600 border-solid border-2 p-4 rounded">
-        <h1>Aaron Morris</h1>
-        <p className="text-gray-500 m-0 p-0">Software engineer at Vercel</p>
+      <nav className={navClass()}>
+        <div className={layoutClass()}>
+          <Header />
+        </div>
+      </nav>
+      <main className={layoutClass()}>
         <p className="pb-2">
           <mark>Under renovation for a bit.</mark>
         </p>
@@ -36,6 +43,7 @@ export default function Home() {
             </a>
           </li>
         </ul>
+        <p>Now: Building a billiards visualization tool</p>
       </main>
     </div>
   );
