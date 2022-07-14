@@ -11,7 +11,8 @@
     "dev": "turbo run dev --parallel",
     "home": "turbo run dev --scope=home",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "newpkg": "scripts/create-package.sh"
   },
   "devDependencies": {
     "prettier": "^2.6.2",
