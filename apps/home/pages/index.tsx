@@ -79,14 +79,14 @@ export default function Home() {
             <p>Husband, father, 28</p>
             <ul>
               {[
-                <Link href="https://twitter.com/aaorris">
+                <Link key="tw" href="https://twitter.com/aaorris">
                   On Twitter @AAorris
                 </Link>,
-                <Link href="https://twitter.com/aaorris">
+                <Link key="li" href="https://linkedin.com/in/aaorris">
                   On LinkedIn @AAorris
                 </Link>,
-              ].map((item) => (
-                <li>{item}</li>
+              ].map((item, i) => (
+                <li key={i}>{item}</li>
               ))}
             </ul>
             <Image placeholder="blur" src={portrait} alt="Picture of me" />
@@ -111,14 +111,14 @@ export default function Home() {
             </div>
             <ul>
               {[
-                <Link href="https://github.com/aaorris">
+                <Link key="gh" href="https://github.com/aaorris">
                   On Github @AAorris
                 </Link>,
-                <Link href="https://links.morris.codes/">
+                <Link key="lk" href="https://links.morris.codes/">
                   I share my bookmarks at links.morris.codes
                 </Link>,
-              ].map((item) => (
-                <li>{item}</li>
+              ].map((item, i) => (
+                <li key={i}>{item}</li>
               ))}
             </ul>
             <Image placeholder="blur" src={render} alt="A recent test render" />
