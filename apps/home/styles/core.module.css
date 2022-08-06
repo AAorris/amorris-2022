@@ -1,0 +1,24 @@
+.page {
+  --u: 4px;
+  --u2: 8px;
+  --u3: 12px;
+  --u4: 16px;
+  --u5: 20px;
+  --u6: 24px;
+  --u7: 28px;
+  --u8: 32px;
+  --u9: 36px;
+  --ux: 40px;
+}
+
+.row {
+  gap: var(--u3);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.shrink {
+  flex-shrink: 1;
+  width: max-content;
+}

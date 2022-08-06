@@ -1,29 +1,14 @@
-.tabs {
-  border-radius: var(--u2);
-}
-.tab {
-  color: #aaa;
-  padding: var(--u);
-  border-radius: var(--u2);
-}
-.tab:hover,
-.tab:focus-visible[aria-selected="true"] {
-  color: #fff;
-}
-.tabPanel {
-  padding-top: var(--u3);
-}
-
 .main {
   padding: 4px;
 }
 
-.avatar {
-  border-radius: 2px;
+.blank {
+  height: 32px;
+  content: ' ';
 }
 
-.nav > a {
-  margin-bottom: var(--u);
+.avatar {
+  border-radius: 8px;
 }
 
 .grid {
