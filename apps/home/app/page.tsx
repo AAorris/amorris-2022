@@ -7,7 +7,7 @@ import workspace from "../public/2022/workspace.jpeg";
 import portrait from "../public/portrait.jpg";
 import aria from "../styles/aria.module.css";
 import core from "../styles/core.module.css";
-import styles from "../styles/home.module.css";
+import styles from "../styles/homepage.module.css";
 
 const imageWidth = 400;
 const imageHeight = 350;

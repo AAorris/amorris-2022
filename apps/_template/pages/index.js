@@ -1,7 +1,7 @@
-import Link from "next/link";
-import Image from "next/image";
 import { NextSeo } from "next-seo";
-import styles from "../styles/Home.module.css";
+import Image from "next/image";
+import Link from "next/link";
+import styles from "../styles/homepage.module.css";
 
 export default function Home() {
   return (
