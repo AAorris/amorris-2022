@@ -1,11 +1,5 @@
-import { Source_Code_Pro } from "@next/font/google";
 import Link from "next/link";
 import "../styles/globals.css";
-
-const font = Source_Code_Pro({
-  subsets: ["latin"],
-  weight: ["400", "600"],
-});
 
 export default function RootLayout({
   children,
@@ -13,7 +7,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html className={font.className}>
+    <html>
       <head />
       <body>
         <header style={{ marginBottom: 30, display: "flex", gap: 20 }}>
