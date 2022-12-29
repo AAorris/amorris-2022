@@ -1,3 +1,13 @@
+@media (min-width: 500px) {
+  .linkList {
+    column-count: 2;
+    width: max-content;
+  }
+  .linkList > li {
+    padding-right: 2em;
+  }
+}
+
 .tabs {
   border-radius: var(--u2);
 }
@@ -34,15 +44,21 @@
   max-width: 800px;
 }
 
+.gallery {
+  display: grid;
+  width: max-content;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.gallery img {
+  object-fit: cover;
+  object-position: 50% 25%;
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;
     flex-direction: column;
-  }
-}
-
-@media (min-width: 600px) {
-  .main {
-    padding: 16px;
   }
 }
