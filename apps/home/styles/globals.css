@@ -26,7 +26,7 @@ form {
 h1 {
   font-size: 4rem;
   line-height: 4.5rem;
-  letter-spacing: 0.01em;
+  letter-spacing: -0.07em;
   margin: 1rem 0;
   font-weight: 600;
 }

@@ -1,16 +1,8 @@
 import clsx from "clsx";
-import Image from "next/image";
 import Link from "next/link";
-import buddy from "../public/2022/forest.jpeg";
-import winterSnow from "../public/2022/winter-snow.jpeg";
-import workspace from "../public/2022/workspace.jpeg";
-import portrait from "../public/portrait.jpg";
 import aria from "../styles/aria.module.css";
 import core from "../styles/core.module.css";
 import styles from "../styles/homepage.module.css";
-
-const imageWidth = 400;
-const imageHeight = 350;
 
 export default function Home() {
   return (
@@ -35,40 +27,6 @@ export default function Home() {
           <li key={i}>{item}</li>
         ))}
       </ul>
-      <div className={styles.gallery}>
-        <Image
-          placeholder="blur"
-          src={portrait}
-          alt="Picture of me"
-          width={imageWidth}
-          height={imageHeight}
-          style={{ objectFit: "cover" }}
-        />
-        <Image
-          placeholder="blur"
-          src={workspace}
-          alt="Picture of my workspace"
-          width={imageWidth}
-          height={imageHeight}
-          style={{ objectFit: "cover" }}
-        />
-        <Image
-          placeholder="blur"
-          src={winterSnow}
-          alt="Winter snow this year"
-          width={imageWidth}
-          height={imageHeight}
-          style={{ objectFit: "cover" }}
-        />
-        <Image
-          placeholder="blur"
-          src={buddy}
-          alt="My son Forest"
-          width={imageWidth}
-          height={imageHeight}
-          style={{ objectFit: "cover" }}
-        />
-      </div>
     </main>
   );
 }

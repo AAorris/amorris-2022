@@ -18,7 +18,6 @@ export default function RootLayout({
       <body style={{ fontFamily: font.style.fontFamily }}>
         <header style={{ marginBottom: 30, display: "flex", gap: 20 }}>
           <Link href="/">amorris.ca</Link>
-          <Link href="/html5">html5</Link>
         </header>
         {children}
       </body>
