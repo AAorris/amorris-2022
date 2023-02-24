@@ -3,7 +3,7 @@ import image from "../../public/render.jpg";
 
 export default function KitchenSink() {
   return (
-    <main>
+    <main style={{ width: "var(--full-width)", margin: "auto" }}>
       <section>
         <hgroup>
           <h1>h1 HTML5 Kitchen Sink</h1>
@@ -348,8 +348,8 @@ pre {
                   value="option1"
                   defaultChecked
                 />{" "}
-                Option one is this and that&mdash;be sure to include why it's
-                great
+                Option one is this and that&mdash;be sure to include why
+                it&apos;s great
               </label>
             </div>
 

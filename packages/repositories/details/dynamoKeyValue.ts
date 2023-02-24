@@ -1,4 +1,5 @@
-import client from "../providers/dynamo";
+import { GetCommandInput, QueryCommandInput } from "@aws-sdk/lib-dynamodb";
+import client, { Response } from "../providers/dynamo";
 
 type PartitionID = {
   table: string;
@@ -25,7 +26,7 @@ type Insertions = {
   getSortKey: (pk: string, data: any) => string;
 };
 
-const getFindArgs = (bucket: PartitionID) => ({
+const getFindArgs = (bucket: PartitionID): QueryCommandInput => ({
   KeyConditionExpression: "pk = :pk",
   ExpressionAttributeValues: {
     ":pk": bucket.pk,
@@ -33,9 +34,20 @@ const getFindArgs = (bucket: PartitionID) => ({
   TableName: bucket.table,
   ScanIndexForward: false,
 });
-export async function find(bucket: PartitionID) {
-  const result = await client.query(getFindArgs(bucket));
-  return [result.Items, result];
+export function find(bucket: PartitionID): Promise<Response> {
+  return client.query(getFindArgs(bucket));
+}
+
+export async function dynamoGetItem(table: string, pk: string, sk: string) {
+  const args: GetCommandInput = {
+    TableName: table,
+    Key: {
+      pk,
+      sk,
+    },
+  };
+  const resp = await client.get(args);
+  return resp;
 }
 
 /** Assume that items are duplicated on insertion

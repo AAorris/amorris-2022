@@ -1,0 +1,12 @@
+.tag {
+  display: flex;
+  place-items: center;
+  border-radius: 10px;
+  background: #111;
+  border: 1px solid #333;
+}
+.tag a {
+  display: block;
+  flex-grow: 1;
+  padding: 30px;
+}

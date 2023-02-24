@@ -1,0 +1,32 @@
+.header {
+  padding-bottom: 70px;
+  margin: auto;
+  max-width: var(--full-width);
+  font-family: var(--font-familjen);
+}
+
+.header a.brand {
+  display: flex;
+  align-items: flex-end;
+  color: #f1f1f1;
+  font-weight: 600;
+  font-size: 150%;
+}
+
+.header {
+  margin-bottom: 30px;
+  display: grid;
+  grid-template-columns: max-content 1fr max-content;
+  grid-auto-rows: 1fr;
+  gap: 30px;
+}
+
+.header > div {
+  display: flex;
+  gap: 20px;
+  align-items: flex-end;
+}
+
+.header a {
+  color: #ccc;
+}

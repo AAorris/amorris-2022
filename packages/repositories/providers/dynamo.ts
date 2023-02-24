@@ -1,5 +1,5 @@
 import { DynamoDBClient } from "@aws-sdk/client-dynamodb";
-import { DynamoDBDocument } from "@aws-sdk/lib-dynamodb";
+import { DynamoDBDocument, QueryCommandOutput } from "@aws-sdk/lib-dynamodb";
 
 const baseClient = new DynamoDBClient({
   region: "us-west-2",
@@ -17,3 +17,5 @@ const client = DynamoDBDocument.from(baseClient, {
 });
 
 export default client;
+
+export type Response = QueryCommandOutput;

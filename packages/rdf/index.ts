@@ -49,7 +49,7 @@ export default async function main() {
   await store.open();
   await put();
   const quads = await allQuads();
-  console.log(quads);
+  // console.log(quads);
 }
 
 // main();
