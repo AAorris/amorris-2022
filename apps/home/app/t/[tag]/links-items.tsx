@@ -1,3 +1,4 @@
+import "server-only";
 import { getLinksForTag } from "repositories/links";
 import styles from "./links-items.module.css";
 

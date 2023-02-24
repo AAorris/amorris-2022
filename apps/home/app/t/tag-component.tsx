@@ -1,3 +1,4 @@
+import "server-only";
 import Link from "next/link";
 import { TagItem } from "repositories/links";
 import styles from "./tag-component.module.css";

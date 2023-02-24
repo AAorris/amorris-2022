@@ -1,7 +1,6 @@
+import "server-only";
 import Link from "next/link";
 import { dynamoGetItem } from "repositories/details/dynamoKeyValue";
-import { getLinksForTag } from "repositories/links";
-
 const table = "amorris-links-03";
 
 export async function LinkDetail({ tag, link }: { tag: string; link: string }) {
