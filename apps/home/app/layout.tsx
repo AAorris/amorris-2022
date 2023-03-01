@@ -16,6 +16,10 @@ const noto = Noto_Sans({
   variable: "--font-noto",
 });
 
+export const metadata = {
+  title: "Aaron Morris",
+};
+
 export default function RootLayout({
   children,
 }: {
