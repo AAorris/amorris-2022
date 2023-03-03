@@ -1,5 +1,6 @@
+import { QueryCommand } from "@aws-sdk/client-dynamodb";
 import { GetCommandInput, QueryCommandInput } from "@aws-sdk/lib-dynamodb";
-import client, { Response } from "../providers/dynamo";
+import client, { baseClient, Response } from "../providers/dynamo";
 
 type PartitionID = {
   table: string;
@@ -35,8 +36,18 @@ const getFindArgs = (bucket: PartitionID): QueryCommandInput => ({
   ScanIndexForward: false,
 });
 export async function find(bucket: PartitionID): Promise<Response> {
-  const found = await client.query(getFindArgs(bucket));
-  console.log(`found ${found}`);
+  // const found = await client.query(getFindArgs(bucket));
+  const found = await baseClient.send(
+    new QueryCommand({
+      KeyConditionExpression: "pk = :pk",
+      ExpressionAttributeValues: {
+        ":pk": { S: bucket.pk },
+      },
+      TableName: bucket.table,
+      ScanIndexForward: false,
+    })
+  );
+  console.log(`found ${found.Items}`);
   return found;
 }
 
