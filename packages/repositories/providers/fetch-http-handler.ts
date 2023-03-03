@@ -1,3 +1,4 @@
+import "server-only";
 import { HttpHandler, HttpRequest, HttpResponse } from "@aws-sdk/protocol-http";
 import { buildQueryString } from "@aws-sdk/querystring-builder";
 import { HeaderBag, HttpHandlerOptions, Provider } from "@aws-sdk/types";
@@ -122,7 +123,7 @@ export class FetchHttpHandler implements HttpHandler {
           response: new HttpResponse({
             headers: transformedHeaders,
             statusCode: response.status,
-            body: { Items: [], item: {} },
+            body: undefined,
           }),
         };
       }),

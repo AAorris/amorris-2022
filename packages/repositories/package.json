@@ -20,6 +20,7 @@
     "@aws-sdk/signature-v4": "^3.282.0",
     "@aws-sdk/types": "^3.272.0",
     "aws-crt": "^1.15.9",
+    "readable-stream": "^4.3.0",
     "server-only": "^0.0.1",
     "ulid": "^2.3.0"
   }
