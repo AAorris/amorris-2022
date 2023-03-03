@@ -37,16 +37,16 @@ const getFindArgs = (bucket: PartitionID): QueryCommandInput => ({
 });
 export async function find(bucket: PartitionID): Promise<Response> {
   // const found = await client.query(getFindArgs(bucket));
-  const found = await baseClient.send(
-    new QueryCommand({
-      KeyConditionExpression: "pk = :pk",
-      ExpressionAttributeValues: {
-        ":pk": { S: bucket.pk },
-      },
-      TableName: bucket.table,
-      ScanIndexForward: false,
-    })
-  );
+  const cmd = new QueryCommand({
+    KeyConditionExpression: "pk = :pk",
+    ExpressionAttributeValues: {
+      ":pk": { S: bucket.pk },
+    },
+    TableName: bucket.table,
+    ScanIndexForward: false,
+  });
+  cmd.middlewareStack.removeByTag("DESERIALIZER");
+  const found = await baseClient.send(cmd);
   console.log(`found ${found.Items}`);
   return found;
 }

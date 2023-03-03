@@ -96,9 +96,8 @@ export class FetchHttpHandler implements HttpHandler {
       (requestOptions as any)["signal"] = abortSignal;
     }
 
-    const fetchRequest = new Request(url, requestOptions);
     const raceOfPromises = [
-      fetch(fetchRequest).then((response) => {
+      fetch(url, requestOptions).then((response) => {
         const fetchHeaders: any = response.headers;
         const transformedHeaders: HeaderBag = {};
 
