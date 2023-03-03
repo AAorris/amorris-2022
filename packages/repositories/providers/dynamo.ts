@@ -18,6 +18,7 @@ import {
 } from "@aws-sdk/types";
 import { Sha256 } from "@aws-crypto/sha256-js";
 import { DynamoDBDocument, QueryCommandOutput } from "@aws-sdk/lib-dynamodb";
+import { FetchHttpHandler } from "./fetch-http-handler";
 
 class Signer extends SignatureV4 {
   constructor(init: SignatureV4Init & SignatureV4CryptoInit) {
@@ -59,6 +60,7 @@ const credentials = {
 export const baseClient = new DynamoDBClient({
   region: "us-west-2",
   credentials,
+  requestHandler: new FetchHttpHandler({ requestTimeout: 3000 }),
   signer: new Signer({
     credentials,
     service: "dynamodb",
