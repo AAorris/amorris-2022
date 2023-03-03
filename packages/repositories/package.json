@@ -12,11 +12,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@aws-crypto/sha256-js": "^4.0.0",
     "@aws-sdk/client-dynamodb": "^3.278.0",
     "@aws-sdk/lib-dynamodb": "^3.278.0",
     "@aws-sdk/protocol-http": "^3.272.0",
     "@aws-sdk/querystring-builder": "^3.272.0",
+    "@aws-sdk/signature-v4": "^3.282.0",
     "@aws-sdk/types": "^3.272.0",
+    "server-only": "^0.0.1",
     "ulid": "^2.3.0"
   }
 }
