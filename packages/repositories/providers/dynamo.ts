@@ -45,10 +45,8 @@ class Signer extends SignatureV4 {
       return super.sign(toSign, options);
     } else {
       const r = toSign as HttpRequest;
-      console.log(`I got the body: ${r.body}`);
       // @ts-ignore
       const result = await super.sign(r, options);
-      console.log(`I got the result body: ${result.body}`);
       return result;
     }
   }
@@ -67,6 +65,12 @@ const baseClient = new DynamoDBClient({
     region: "us-west-2",
     sha256: Sha256,
   }),
+  logger: {
+    debug: (...content: any[]) => console.debug(...content),
+    info: (...content: any[]) => console.info(...content),
+    warn: (...content: any[]) => console.warn(...content),
+    error: (...content: any[]) => console.error(...content),
+  },
 });
 
 // @ts-ignore
