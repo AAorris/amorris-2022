@@ -1,4 +1,3 @@
-import "server-only";
 import { HttpHandler, HttpRequest, HttpResponse } from "@aws-sdk/protocol-http";
 import { buildQueryString } from "@aws-sdk/querystring-builder";
 import { HeaderBag, HttpHandlerOptions, Provider } from "@aws-sdk/types";
@@ -96,8 +95,9 @@ export class FetchHttpHandler implements HttpHandler {
       (requestOptions as any)["signal"] = abortSignal;
     }
 
+    const fetchRequest = new Request(url, requestOptions);
     const raceOfPromises = [
-      fetch(url, requestOptions).then((response) => {
+      fetch(fetchRequest).then((response) => {
         const fetchHeaders: any = response.headers;
         const transformedHeaders: HeaderBag = {};
 
@@ -122,7 +122,7 @@ export class FetchHttpHandler implements HttpHandler {
           response: new HttpResponse({
             headers: transformedHeaders,
             statusCode: response.status,
-            body: undefined,
+            body: response.body,
           }),
         };
       }),
