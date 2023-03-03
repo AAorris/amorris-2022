@@ -1,6 +1,10 @@
 import { Suspense } from "react";
 import { Tags } from "./page-tags";
 
+export const config = {
+  runtime: "edge",
+};
+
 export default async function Home() {
   return (
     <main>
