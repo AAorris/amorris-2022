@@ -47,7 +47,8 @@ class Signer extends SignatureV4 {
       const r = toSign as HttpRequest;
       console.log(`I got the body: ${r.body}`);
       // @ts-ignore
-      const result = super.sign(r, options);
+      const result = await super.sign(r, options);
+      console.log(`I got the result body: ${result.body}`);
       return result;
     }
   }
