@@ -34,8 +34,10 @@ const getFindArgs = (bucket: PartitionID): QueryCommandInput => ({
   TableName: bucket.table,
   ScanIndexForward: false,
 });
-export function find(bucket: PartitionID): Promise<Response> {
-  return client.query(getFindArgs(bucket));
+export async function find(bucket: PartitionID): Promise<Response> {
+  const found = await client.query(getFindArgs(bucket));
+  console.log(`found ${found}`);
+  return found;
 }
 
 export async function dynamoGetItem(table: string, pk: string, sk: string) {
