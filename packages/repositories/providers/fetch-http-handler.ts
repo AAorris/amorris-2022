@@ -122,7 +122,7 @@ export class FetchHttpHandler implements HttpHandler {
           response: new HttpResponse({
             headers: transformedHeaders,
             statusCode: response.status,
-            body: response.clone().body,
+            body: { Items: [], item: {} },
           }),
         };
       }),
