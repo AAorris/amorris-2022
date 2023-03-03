@@ -1,3 +1,4 @@
+import "server-only";
 import { getTags } from "repositories/links";
 import Tag from "./t/tag-component";
 import styles from "./page-tags.module.css";
