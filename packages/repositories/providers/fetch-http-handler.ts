@@ -98,19 +98,16 @@ export class FetchHttpHandler implements HttpHandler {
     const fetchRequest = new Request(url, requestOptions);
     const raceOfPromises = [
       fetch(fetchRequest).then((response) => {
-        return {
-          response,
-        };
-        // const fetchHeaders: any = response.headers;
-        // const transformedHeaders: HeaderBag = {};
+        const fetchHeaders: any = response.headers;
+        const transformedHeaders: HeaderBag = {};
 
-        // for (const pair of <Array<string[]>>fetchHeaders.entries()) {
-        //   transformedHeaders[pair[0]] = pair[1];
-        // }
+        for (const pair of <Array<string[]>>fetchHeaders.entries()) {
+          transformedHeaders[pair[0]] = pair[1];
+        }
 
         // const hasReadableStream = response.body !== undefined;
 
-        // // Return the response with buffered body
+        // Return the response with buffered body
         // if (!hasReadableStream) {
         //   return response.blob().then((body) => ({
         //     response: new HttpResponse({
@@ -120,14 +117,14 @@ export class FetchHttpHandler implements HttpHandler {
         //     }),
         //   }));
         // }
-        // // Return the response with streaming body
-        // return {
-        //   response: new HttpResponse({
-        //     headers: transformedHeaders,
-        //     statusCode: response.status,
-        //     body: response.body,
-        //   }),
-        // };
+        // Return the response with streaming body
+        return {
+          response: new HttpResponse({
+            headers: transformedHeaders,
+            statusCode: response.status,
+            body: response.clone().body,
+          }),
+        };
       }),
       requestTimeout(requestTimeoutInMs),
     ];
