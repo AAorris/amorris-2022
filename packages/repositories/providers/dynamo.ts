@@ -69,7 +69,7 @@ const baseClient = new DynamoDBClient({
   credentials,
   signer: new Signer({
     credentials,
-    service: "DynamoDB",
+    service: "dynamodb",
     region: "us-west-2",
     sha256: Sha256,
   }),
