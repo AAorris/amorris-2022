@@ -44,18 +44,10 @@ class Signer extends SignatureV4 {
       // event
       return super.sign(toSign, options);
     } else {
-      // request
-      console.log(`>>> ${(toSign as HttpRequest).path}`);
-      try {
-        const result = super.sign(toSign, options);
-        console.log(`<<< ${(toSign as HttpRequest).path}`);
-        return result;
-      } catch (e) {
-        console.error(e.message);
-        console.warn(e.stack);
-        console.log(`xxx ${(toSign as HttpRequest).path}`);
-        throw e;
-      }
+      const r = toSign as HttpRequest;
+      // @ts-ignore
+      const result = super.sign(r.clone(), options);
+      return result;
     }
   }
 }

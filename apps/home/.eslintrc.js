@@ -1,1 +1,1 @@
-export { default } from "@aaorris/esconfig";
+module.exports = require("@aaorris/esconfig");
