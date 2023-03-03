@@ -1,5 +1,6 @@
-import { QueryCommand } from "@aws-sdk/client-dynamodb";
+import { QueryCommand, QueryCommandOutput } from "@aws-sdk/client-dynamodb";
 import { GetCommandInput, QueryCommandInput } from "@aws-sdk/lib-dynamodb";
+import { InitializeHandlerOutput } from "@aws-sdk/types";
 import client, { baseClient, Response } from "../providers/dynamo";
 
 type PartitionID = {
@@ -46,6 +47,23 @@ export async function find(bucket: PartitionID): Promise<Response> {
     ScanIndexForward: false,
   });
   cmd.middlewareStack.removeByTag("DESERIALIZER");
+  cmd.middlewareStack.add(
+    (next, context) =>
+      async (args): Promise<InitializeHandlerOutput<QueryCommandOutput>> => {
+        console.log("starting middleware");
+        const _ = await next(args);
+        console.log("ending middleware");
+
+        const output: QueryCommandOutput = {
+          $metadata: {},
+          Items: [{ id: { S: "mock" } }],
+        };
+        return Promise.resolve({
+          output,
+          response: null,
+        });
+      }
+  );
   const found = await baseClient.send(cmd);
   console.log(`found ${found.Items}`);
   return found;
