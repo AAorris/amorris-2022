@@ -5,6 +5,9 @@ import styles from "./page-tags.module.css";
 export async function Tags({ limit }: { limit?: number }) {
   let start = Date.now();
   const data = await getTags("amorris-links-03");
+  // const data = await fetch(`https://home-669k1upev-amorris.vercel.app/api/t`)
+  //   .then((r) => r.json())
+  //   .then((j) => j.tags);
   let end = Date.now();
   const sortedItems = data.items
     .sort((a, b) => b.count - a.count)

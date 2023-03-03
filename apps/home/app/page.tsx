@@ -1,6 +1,8 @@
 import { Suspense } from "react";
 import { Tags } from "./page-tags";
 
+export const fetchCache = "only-no-store";
+
 export default async function Home() {
   return (
     <main>
