@@ -9,6 +9,8 @@
   --nm650: hsla(14, 83%, 44%, 0.678);
   --nm700: hsla(0, 83%, 29%, 0.325);
 
+  --full-width: 1400px;
+
   --link: #a386ff;
   --p: #fff;
   --focus-20: var(--nm350);
@@ -16,6 +18,16 @@
   --focus-100: var(--nm450);
   --focus-transition: box-shadow 0.2s ease-out;
 }
+
+.fullWidth {
+  width: var(--full-width);
+  margin: auto;
+}
+
+body {
+  font-family: var(--font-noto);
+}
+
 form {
   background: #111;
   padding: 20px;
@@ -26,7 +38,7 @@ form {
 h1 {
   font-size: 4rem;
   line-height: 4.5rem;
-  letter-spacing: -0.07em;
+  letter-spacing: 0.03em;
   margin: 1rem 0;
   font-weight: 600;
 }
@@ -109,7 +121,7 @@ p {
 sub {
   font-size: 1rem;
   color: var(--focus-80);
-  letter-spacing: 0.03em;
+  letter-spacing: 0.08em;
 }
 
 article {

@@ -1,4 +1,7 @@
-import client from "../providers/dynamo";
+import { QueryCommand, QueryCommandOutput } from "@aws-sdk/client-dynamodb";
+import { GetCommandInput, QueryCommandInput } from "@aws-sdk/lib-dynamodb";
+import { InitializeHandlerOutput } from "@aws-sdk/types";
+import client, { baseClient, Response } from "../providers/dynamo";
 
 type PartitionID = {
   table: string;
@@ -25,7 +28,7 @@ type Insertions = {
   getSortKey: (pk: string, data: any) => string;
 };
 
-const getFindArgs = (bucket: PartitionID) => ({
+const getFindArgs = (bucket: PartitionID): QueryCommandInput => ({
   KeyConditionExpression: "pk = :pk",
   ExpressionAttributeValues: {
     ":pk": bucket.pk,
@@ -33,9 +36,49 @@ const getFindArgs = (bucket: PartitionID) => ({
   TableName: bucket.table,
   ScanIndexForward: false,
 });
-export async function find(bucket: PartitionID) {
-  const result = await client.query(getFindArgs(bucket));
-  return [result.Items, result];
+export async function find(bucket: PartitionID): Promise<Response> {
+  // const found = await client.query(getFindArgs(bucket));
+  const cmd = new QueryCommand({
+    KeyConditionExpression: "pk = :pk",
+    ExpressionAttributeValues: {
+      ":pk": { S: bucket.pk },
+    },
+    TableName: bucket.table,
+    ScanIndexForward: false,
+  });
+  cmd.middlewareStack.removeByTag("DESERIALIZER");
+  cmd.middlewareStack.add(
+    (next, context) =>
+      async (args): Promise<InitializeHandlerOutput<QueryCommandOutput>> => {
+        console.log("starting middleware");
+        const _ = await next(args);
+        console.log("ending middleware");
+
+        const output: QueryCommandOutput = {
+          $metadata: {},
+          Items: [{ id: { S: "mock" } }],
+        };
+        return Promise.resolve({
+          output,
+          response: null,
+        });
+      }
+  );
+  const found = await baseClient.send(cmd);
+  console.log(`found ${found.Items}`);
+  return found;
+}
+
+export async function dynamoGetItem(table: string, pk: string, sk: string) {
+  const args: GetCommandInput = {
+    TableName: table,
+    Key: {
+      pk,
+      sk,
+    },
+  };
+  const resp = await client.get(args);
+  return resp;
 }
 
 /** Assume that items are duplicated on insertion

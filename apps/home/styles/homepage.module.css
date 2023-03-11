@@ -1,3 +1,7 @@
+.container {
+  max-width: var(--full-width);
+  margin: auto;
+}
 @media (min-width: 500px) {
   .linkList {
     column-count: 2;

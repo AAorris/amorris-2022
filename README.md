@@ -1,3 +1,3 @@
 # Workspace
 
-A monorepo for my work.
+A monorepo for my experiments.

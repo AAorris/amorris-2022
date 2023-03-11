@@ -47,11 +47,22 @@ export const deleteLink = async (table, uid): Promise<any> => {
 };
 
 export const getLinksForTag = async (table, tag) => {
-  const [items] = await find({ table, pk: tag });
-  return { items };
+  const response = await find({ table, pk: tag });
+  return { items: response.Items };
 };
 
-export const getTags = async (table) => {
-  const [items] = await find({ table, pk: "//tags" });
-  return { items };
+export interface TagItem {
+  sk: string;
+  count: number;
+  lastUpdated: string;
+  pk: string;
+  name: string;
+}
+interface Tags {
+  items: TagItem[];
+}
+
+export const getTags = async (table): Promise<Tags> => {
+  const resp = await find({ table, pk: "//tags" });
+  return { items: resp.Items as TagItem[] };
 };
