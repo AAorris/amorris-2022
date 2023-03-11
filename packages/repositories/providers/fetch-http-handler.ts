@@ -97,7 +97,7 @@ export class FetchHttpHandler implements HttpHandler {
 
     const fetchRequest = new Request(url, requestOptions);
     const raceOfPromises = [
-      fetch(fetchRequest).then((response) => {
+      fetch(fetchRequest).then(async (response) => {
         const fetchHeaders: any = response.headers;
         const transformedHeaders: HeaderBag = {};
 
@@ -118,11 +118,12 @@ export class FetchHttpHandler implements HttpHandler {
         //   }));
         // }
         // Return the response with streaming body
+        const data = response.clone().
         return {
           response: new HttpResponse({
             headers: transformedHeaders,
             statusCode: response.status,
-            body: response.body,
+            body: data.value,
           }),
         };
       }),
